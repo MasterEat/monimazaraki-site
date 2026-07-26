@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="el"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Διακονήματα - Ιερά Μονή Αγίου Ιωάννου του Θεολόγου Μαζαρακίου</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#0d513d",
+                        "on-secondary": "#ffffff",
+                        "background": "#fff8f4",
+                        "surface-dim": "#e2d8cf",
+                        "surface-container-high": "#f1e6dd",
+                        "surface-bright": "#fff8f4",
+                        "on-secondary-container": "#5e684b",
+                        "surface-container-lowest": "#ffffff",
+                        "parchment": "#F5F0E6",
+                        "tertiary-fixed": "#b1f0d5",
+                        "on-error": "#ffffff",
+                        "limestone": "#E8DFD0",
+                        "on-primary-fixed": "#3d0508",
+                        "surface-tint": "#954745",
+                        "on-surface-variant": "#544342",
+                        "secondary-container": "#dce7c2",
+                        "on-tertiary-fixed": "#002116",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdad8",
+                        "on-tertiary-container": "#7ab79f",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#77302f",
+                        "surface-container-low": "#fcf2e8",
+                        "surface-container-highest": "#ebe1d7",
+                        "primary": "#511315",
+                        "surface-container": "#f6ece3",
+                        "tertiary": "#003023",
+                        "tertiary-container": "#004936",
+                        "antique-gold": "#B59A62",
+                        "secondary-fixed": "#dce7c2",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1f1b15",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#d9c1bf",
+                        "on-surface": "#1f1b15",
+                        "on-primary-container": "#f1918e",
+                        "inverse-on-surface": "#f9efe5",
+                        "surface-variant": "#ebe1d7",
+                        "outline": "#877271",
+                        "secondary": "#586245",
+                        "surface": "#fff8f4",
+                        "inverse-primary": "#ffb3b0",
+                        "primary-container": "#6e2929",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#414a2f",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "secondary-fixed-dim": "#c0cba7",
+                        "tertiary-fixed-dim": "#95d3ba",
+                        "inverse-surface": "#353029",
+                        "on-secondary-fixed": "#161e07"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1140px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["\"Source Serif 4\""],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-md": ["\"Source Sans 3\""],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "label-sm": ["\"Source Sans 3\""],
+                        "body-lg": ["\"Source Serif 4\""],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["\"Source Serif 4\""]
+                    },
+                    "fontSize": {
+                        "body-sm": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "body-md": ["17px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f4;
+            color: #1f1b15;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-image-mask {
+            clip-path: inset(0 0 0 0);
+            transition: clip-path 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .editorial-image-container:hover .editorial-image-mask {
+            clip-path: inset(10px 10px 10px 10px);
+        }
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            opacity: 0.08;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<div class="fixed inset-0 grain-overlay z-50"></div>
+<!-- TopNavBar -->
+<!-- Top Information Bar -->
+<div class="bg-surface-container-high border-b border-outline/10 hidden md:block">
+<div class="max-w-container-max mx-auto px-6 h-10 flex items-center justify-between font-label-sm text-on-surface-variant">
+<div class="flex gap-6">
+<span class="">Μαζαράκι Βαγίων, Βοιωτία</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 22620 62051</span>
+</div>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#programme">Πρόγραμμα Ακολουθιών</a>
+<span class="opacity-20">|</span>
+<a class="hover:text-primary transition-colors" href="#directions">Οδηγίες Μετάβασης</a>
+</div>
+</div>
+</div>
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 border-b border-outline/10 bg-background/95 backdrop-blur-sm">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop flex justify-between items-center h-20 md:h-24">
+<div class="flex items-center gap-4">
+<img alt="Σφραγίδα Ιεράς Μονής" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDidiJEClTT6nTeOHy_hyMUzPdBIkmY4exUIPlK9Fg_fnoDtJeFXy5AhqhWyTv7fgpGUHWQ4STMz9dbfswfj4tzIeTJTAZ-dVhG_bQAYOJL3qJ5l2X5pd4_1zjQkz5yMtAbdlS0sUL3X36h3USNW47U9U-5-Sq_xwUTSQuAfb7IFnDQyagJ8cWnaBObOg5jYzFzfbdY-g9-Mgvj9vvSvkEFB-mA7gyzmdU99CJFW_UQ9f9NZrrO16P_RH-ss_gam509yy9d7yAGu70">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md leading-tight text-primary">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span>
+<span class="font-label-sm text-antique-gold tracking-widest hidden md:block">ΜΑΖΑΡΑΚΙ ΒΑΓΙΩΝ</span>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-6 font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Αρχική</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Η Μονή</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Μοναχική Ζωή</a>
+<a class="text-primary border-b-2 border-primary cursor-pointer transition-all" href="#">Διακονήματα</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Πρόγραμμα</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Νέα</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Επίσκεψη</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Επικοινωνία</a>
+</div>
+<div class="flex gap-4 text-primary lg:hidden">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto">
+<!-- Hero Intro -->
+<section class="px-margin-desktop pt-24 pb-32 flex flex-col items-center text-center transition-all duration-1000 opacity-0 opacity-100">
+<span class="text-primary font-label-md uppercase tracking-widest mb-6 block">Βίος και Εργασία</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8 max-w-3xl">Διακονήματα και Εργόχειρα</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed italic">
+                «Η καθημερινή εργασία αποτελεί αναπόσπαστο μέρος της μοναχικής ζωής και πραγματοποιείται με φροντίδα, υπομονή και προσευχή.»
+            </p>
+<div class="w-24 h-px bg-outline-variant/30 mt-12"></div>
+</section>
+<!-- Ministry Sections - Alternating Editorial Layout -->
+<!-- 1. Χρυσοκεντητική -->
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Χρυσοκεντητική</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Η τέχνη της βελόνας και του χρυσού νήματος επιστρατεύεται για τη δημιουργία ιερών καλυμμάτων και αμφίων. Κάθε βελονιά αποτελεί μια σιωπηλή δέηση, αποτυπώνοντας βυζαντινά μοτίβα που αντέχουν στον χρόνο.
+                    </p>
+<div class="h-px bg-outline-variant/20 w-16 mb-8"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 italic">
+                        Λεπτομερής εργασία σε μετάξι και χρυσοκλωστή, ακολουθώντας παραδοσιακά σχέδια της Ορθόδοξης παράδοσης.
+                    </p>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 editorial-image-container relative">
+<div class="editorial-image-mask aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A close-up, high-detail macro shot of an intricate hand-embroidered liturgical vestment in progress. Gold and silver threads catch the warm, natural afternoon sunlight flowing through a monastery window. The fabric is a deep, rich burgundy silk with complex floral and cruciform patterns. The aesthetic is serene, tactile, and editorial, reflecting ancient craftsmanship and quiet reverence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCDPBh-hdMOxVfeWqlDnR-3ANWTpFRwKpNt_sVdo0jD0ctDEd72Lwd3P0XKGPDeHY2BKTOAdk3C2-mzeRksjQu6Uy2Ly2ZapnD8TrAF0xdRHp79cjkNCiMXbGfcIL0y6X_50XdsWSEbMjNS11ZnRRpfwKs2wb27XB47K98dMNR2RZ-lr0iYzkINi19KUkIwrLC-aqg2LAt1reArl0JHj9oQIaCwg4jSTvESrlalzSOWfwaZwGuAVliuc7A_-VOD1tPHI0-Iue-0mQ">
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Αγιογραφία -->
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 editorial-image-container relative">
+<div class="editorial-image-mask aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An atmospheric shot of an icon painting studio (hagiography workshop). An unfinished icon of a saint stands on a wooden easel, with natural earth pigments in small ceramic bowls nearby. Soft, diffused lighting illuminates the space, casting gentle shadows across the limestone walls. The style is minimalist and grounded, focusing on the sacred nature of the artistic process with warm, earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyczIxDzw34BZl2V79Yp8HpCVXRQbQq_0X-u7omatRrs-ZicEQEUf0Ih4zXW4UBZi9_g0Dgw3ZjXHYMToXCwNZKnaZfWT9Is0_GCWlC3GEGuEqBRQtFDaelV6dwKRypWEKzVvtyR6e2B3eiHXeQbYVFS3PSXxjiBcEe6jSIU0eU5UBfMp-dcPeGMRkisr7eyVTKDXLj2YYUcCDA4_Sy79WXGxgdSqxjzZvU003zxTM0qRCnY3q2R9DAuxDKBkxBP79g8_JIPVdFdA">
+</div>
+</div>
+<div class="md:col-span-5 pl-0 md:pl-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Αγιογραφία</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Η αγιογραφία δεν είναι απλή ζωγραφική, αλλά «παράθυρο» προς την αιωνιότητα. Οι μοναχοί, χρησιμοποιώντας φυσικά υλικά και αυγοτέμπερα, ιστορούν μορφές αγίων με την πνευματική νηστεία που απαιτεί το λειτούργημα.
+                    </p>
+<div class="h-px bg-outline-variant/20 w-16 mb-8"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 italic">
+                        Φυσικές χρωστικές, κρόκος αυγού και ξύλινες επιφάνειες με προετοιμασία από στόκο και λινό ύφασμα.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 3. Παρασκευή λιβανιού -->
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Παρασκευή λιβανιού</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Το θυμίαμα παρασκευάζεται με την πρόσμιξη καθαρής ρητίνης και εκλεκτών αρωματικών ελαίων. Η διαδικασία της μάλαξης απαιτεί υπομονή, ώστε το λιβάνι να αποκτήσει την απαραίτητη υφή και την ευωδία που αρμόζει στη λατρεία.
+                    </p>
+<div class="h-px bg-outline-variant/20 w-16 mb-8"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 italic">
+                        Χειροποίητο μοσχοθυμίαμα με αρώματα όπως τριαντάφυλλο, βυζαντινό, και άνθος ερήμου.
+                    </p>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 editorial-image-container relative">
+<div class="editorial-image-mask aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A top-down, minimalist editorial photograph showing hands covered in fine white powder, kneading incense resin on a smooth limestone table. Small piles of colorful, powdered aromatic resins sit in a rhythmic arrangement. The lighting is bright and high-key, highlighting the tactile texture of the materials against a warm parchment background. Peaceful and intentional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSZ4uZ37lX2jXOf7-RdR0iePKRjelku4Q6lRMSAzD5e2lFuv66M9XPH5ZzGIOa3U731-raBcfqVPWEimF1xBSJFYbvZv0YvqY1fwrmaS88yMJt_6XnZRjDP_XTZsk6nPh9-3cLmk_NGrNDsh854wpcDZjXbCHlUv7WoiJAk89gyoipwFaxWpPeCUyU0XHBBjOQo49rOiko01jAA_eaDHh3JuO0QbwgC-mqbCmyj9gY6HpINlQlV3_dFEc7hgP5jcQx5slI6vhQXWE">
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Παραδοσιακή ζύμη φύλλου & Τυροκομία (Grid) -->
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<div class="editorial-image-container mb-10">
+<div class="editorial-image-mask aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A clean, rustic kitchen scene where a thin, translucent sheet of handmade phyllo dough is being stretched over a floured wooden board. Fine flour dust hangs in the air, illuminated by a sharp beam of sunlight. The aesthetic is tactile and monastic, using natural wood and stone textures and a palette of ivory and limestone. Every element feels intentional and timeless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAROnUimlicdDS_fDmXefrRGAx-wU9n1bNfanu-jbdHhT2uApsGh0AvlSUvk8ZSxlbvri2DoaEOlAjZSw0WEIl8hKkLRTI-tBLVMvrRc3OxL5pTC59Qf3DTy5WvRmFiRsNVirFFkNJs8B9BU9t-ASQk8gMg1_N9px_4O_lFXw-eVfR_Yy4UwQs17YrDYkAi3oTgiXX7yTnUHzfkV9BBZO4bwMoYMzk0utiqXi27txwGfgrrr1hmly40HWYle4Yk5V0SwBe-BtcqBSs">
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Παραδοσιακή ζύμη φύλλου</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Η παρασκευή παραδοσιακού φύλλου βασίζεται σε αγνά υλικά της περιοχής και την τεχνική του ανοίγματος στο χέρι, διατηρώντας τις πατροπαράδοτες συνταγές των παλαιότερων μοναχών.
+                    </p>
+</div>
+<div>
+<div class="editorial-image-container mb-10">
+<div class="editorial-image-mask aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Minimalist still life of traditional monastic cheese aging on a rough wooden shelf in a cool, stone cellar. The lighting is low and atmospheric, emphasizing the texture of the cheese rinds and the ancient masonry. A sprig of dried rosemary rests beside the cheese wheels. The overall mood is quiet, slow-aged, and authentic, with a deep connection to the land of Boeotia." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUv2g_AnPGQw6RvFkrY55tgH9AmUGibsl0-Zus4SRzkybIL3qbBO6D6TAsv9vQmEjw78sH3GfukIMY-OHcGLcU_TVt_9M7LGLtR35008gFSpmQuiMpNRDtCSy9k-XTW2v0PUEnFHqh-eM8B1mU4Jy7O5ZS9lsW9qetFDEgGekrcj6fxKTwErz9oT42TIdEioBMQWNbwGuMv7uL8M2tKjfaQsUQULaKObrgWJEA2YpJ7dGFxlFMhRn-4SAWbL65Sgx2zuQjx-sHXhw">
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Τυροκομία</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Αξιοποιώντας το γάλα από το κοπάδι της Μονής, παράγονται εκλεκτά τυροκομικά προϊόντα με φυσική ωρίμανση, χωρίς προσθήκη συντηρητικών, με σεβασμό στον κύκλο της φύσης.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 5. Ξυλουργική & Βυζαντινή Μουσική (Asymmetric) -->
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 editorial-image-container relative">
+<div class="editorial-image-mask aspect-[21/9] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An expansive view of a woodworking workshop within a stone monastery building. Large planks of oak and walnut lean against the walls. Wood shavings cover the floor. A monk is visible in the background, out of focus, focused on his task. The lighting is cinematic, with shafts of light highlighting the floating dust. The style is rugged yet serene, emphasizing the dignity of manual labor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCYhZmMDktH89vxRX9K66gcVXDtyo2kroX8oLbzB2vgjlsGeZV8QNVB6vgCP5P-034ohCDkIDEkMxuw9O8VQ-ue0vpJzZLL16cm9C6MP94A2XIeLlbY7-c1yc9ZyU93TSZnX2PsNQ4BDnEUkEsnnGzZvqmwZYuhjp2COTNYIuwftp1CyeRwXOAclzIbQhM1p9M-BEKD1VANX2zKKfrXXK3t8_xiXXDQQfq9jY25Zbpiu_vLa6kZZoxF6QCOyt6cGfW00xp-x1OI2U">
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Ξυλουργική</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Στο εργαστήριο ξυλουργικής κατασκευάζονται έπιπλα, σταυροί και αντικείμενα καθημερινής χρήσης. Η αίσθηση του ξύλου και η μυρωδιά του ρετσινιού συνδέουν την εργασία με τη δημιουργία του Θεού.
+                    </p>
+</div>
+</div>
+</section>
+<section class="px-margin-desktop mb-40 transition-all duration-1000 opacity-0 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-4 order-2 md:order-1 pb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Βυζαντινή μουσική</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Η καλλιέργεια της ψαλτικής τέχνης αποτελεί πνευματική άσκηση. Η μελέτη των παλαιών χειρογράφων και η διατήρηση της οκταηχίας διαφυλάσσουν την αδιάκοπη παράδοση της Ορθόδοξης υμνολογίας.
+                    </p>
+</div>
+<div class="md:col-span-8 order-1 md:order-2 editorial-image-container">
+<div class="editorial-image-mask aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A close-up of an ancient Byzantine musical manuscript with hand-drawn neumes and ornate Greek calligraphy on yellowed parchment. The lighting is soft and warm, emphasizing the texture of the ink and the aged paper. The composition is elegant and academic, reflecting a deep respect for intellectual and spiritual heritage. A wooden lectern is partially visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC07WwoQnEdxxbIqQ6jfngl3G1uzdzrESOxZnHdpmozQr4bEO0QfnM9Hi1RwJrrofmDEDMaMsWpwxjK0NJ28qm__lMpLiV51X-K7VkoZmcAyIVIBBdWRJz2WQt8ENAJCkXzBcO7zm6KW-Uy2P0FnpZhQWoDvu_9ysW1SLfLxlWOGNhGfw9wmB7sAXnVoKtPgRzUnu7_tPn5dr5P8Yun4nF_MotDPdzjnIboEfPk38oU9be0q8dsjmHmHQlcLx9TrNyBCe25hEDRYac">
+</div>
+</div>
+</div>
+</section>
+<!-- Final Section -->
+<section class="bg-limestone dark:bg-surface-dim py-32 px-margin-desktop text-center transition-all duration-1000 opacity-0 opacity-100">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Εργόχειρα της Ιεράς Μονής</h2>
+<p class="text-on-surface-variant mb-12">
+                    Τα εργόχειρα των μοναχών είναι διαθέσιμα για όσους επιθυμούν να φέρουν ένα μέρος της μοναστικής ευλογίας στο σπίτι τους. Για πληροφορίες σχετικά με τη διαθεσιμότητα των προϊόντων μας, παρακαλούμε επικοινωνήστε μαζί μας.
+                </p>
+<a class="inline-block border border-primary text-primary px-10 py-4 font-label-md hover:bg-primary/5 transition-colors duration-200 uppercase tracking-widest" href="#">
+                    Επικοινωνία με τη Μονή
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container border-t border-outline/10">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</h3>
+<p class="font-body-sm text-on-surface-variant max-w-xs">
+                Ένας ιερός τόπος αφιερωμένος στην προσευχή, τη μοναχική άσκηση και την διαφύλαξη της Ορθόδοξης Παράδοσης στην καρδιά της Βοιωτίας.
+            </p>
+<div class="flex gap-4">
+<span class="w-10 h-10 border border-limestone flex items-center justify-center hover:text-primary cursor-pointer transition-colors text-xs font-bold">FB</span>
+<span class="w-10 h-10 border border-limestone flex items-center justify-center hover:text-primary cursor-pointer transition-colors text-xs font-bold">YT</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-antique-gold tracking-widest uppercase">ΣΥΝΔΕΣΜΟΙ</h4>
+<nav class="flex flex-col gap-2 font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Πρόγραμμα Ακολουθιών</a>
+<a class="hover:text-primary transition-colors" href="#">Νέα &amp; Ανακοινώσεις</a>
+<a class="hover:text-primary transition-colors" href="#">Οδηγίες Επίσκεψης</a>
+<a class="hover:text-primary transition-colors" href="#">Πολιτική Απορρήτου</a>
+<a class="hover:text-primary transition-colors" href="#">Όροι Χρήσης</a>
+<a class="hover:text-primary transition-colors" href="#">Χάρτης Ιστότοπου</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-antique-gold tracking-widest uppercase">ΕΠΙΚΟΙΝΩΝΙΑ</h4>
+<div class="font-body-sm text-on-surface-variant space-y-2">
+<p class="">Τηλ: 22620 62051</p>
+<p class="">Email: info@monimazaraki.gr</p>
+<p class="">Website: monimazaraki.gr</p>
+<p class="">Διεύθυνση: Μαζαράκι Βαγίων, Βοιωτία, Θήβα 320 02</p>
+</div>
+<div class="pt-4 border-t border-limestone flex flex-col gap-2">
+<p class="font-label-sm opacity-60">© 2026 Ιερά Μονή Αγίου Ιωάννου του Θεολόγου Μαζαρακίου. All Rights Reserved.</p>
+<p class="font-label-sm opacity-30 text-[10px]">Made by MasterEat</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for scroll reveals
+        document.addEventListener('DOMContentLoaded', () => {
+            const observers = [];
+            const sections = document.querySelectorAll('section');
+            
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+                revealObserver.observe(section);
+            });
+        });
+    </script>
+
+
+</body></html>

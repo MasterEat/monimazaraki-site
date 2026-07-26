@@ -1,0 +1,404 @@
+<!DOCTYPE html><html class="light" lang="el"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Πρόγραμμα Ιερών Ακολουθιών | Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#e2d8cf",
+                    "parchment": "#F5F0E6",
+                    "surface-container-highest": "#ebe1d7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#002116",
+                    "surface-tint": "#954745",
+                    "on-primary-fixed": "#3d0508",
+                    "outline": "#877271",
+                    "tertiary": "#003023",
+                    "surface-container-high": "#f1e6dd",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#6e2929",
+                    "surface-container-low": "#fcf2e8",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#ebe1d7",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#95d3ba",
+                    "background": "#fff8f4",
+                    "on-secondary-fixed": "#161e07",
+                    "inverse-surface": "#353029",
+                    "limestone": "#E8DFD0",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f9efe5",
+                    "primary-fixed-dim": "#ffb3b0",
+                    "on-secondary-container": "#5e684b",
+                    "on-error-container": "#93000a",
+                    "primary": "#511315",
+                    "on-secondary-fixed-variant": "#414a2f",
+                    "tertiary-container": "#004936",
+                    "secondary-container": "#dce7c2",
+                    "surface-container": "#f6ece3",
+                    "on-tertiary-container": "#7ab79f",
+                    "on-primary-fixed-variant": "#77302f",
+                    "surface-bright": "#fff8f4",
+                    "antique-gold": "#B59A62",
+                    "surface": "#fff8f4",
+                    "secondary": "#586245",
+                    "secondary-fixed": "#dce7c2",
+                    "on-background": "#1f1b15",
+                    "on-surface": "#1f1b15",
+                    "inverse-primary": "#ffb3b0",
+                    "primary-fixed": "#ffdad8",
+                    "tertiary-fixed": "#b1f0d5",
+                    "secondary-fixed-dim": "#c0cba7",
+                    "outline-variant": "#d9c1bf",
+                    "on-tertiary-fixed-variant": "#0d513d",
+                    "on-primary-container": "#f1918e",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#544342",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1140px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"],
+                    "label-md": ["\"Source Sans 3\""],
+                    "headline-md": ["Libre Caslon Text"],
+                    "body-lg": ["\"Source Serif 4\""],
+                    "body-sm": ["\"Source Serif 4\""],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "label-sm": ["\"Source Sans 3\""],
+                    "body-md": ["\"Source Serif 4\""]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-sm": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "body-md": ["17px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .scrolling-header {
+            transition: all 0.3s ease;
+        }
+        .scrolling-header.scrolled {
+            background-color: #fff8f4;
+            height: 72px;
+            box-shadow: 0 4px 20px -10px rgba(0,0,0,0.1);
+        }
+        .parchment-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-outline/10 scrolling-header">
+<div class="max-w-container-max mx-auto px-margin-mobile flex justify-between items-center h-20">
+<div class="flex flex-col">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight">Saint John</span>
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-on-surface-variant uppercase">The Theologian</span>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="px-margin-mobile pt-8 pb-10 text-center">
+<span class="font-label-md text-label-md text-antique-gold uppercase tracking-widest mb-2 block">Μαζαράκι Θηβών</span>
+<h1 class="font-headline-xl text-[40px] leading-tight text-primary mb-4">Πρόγραμμα Ιερών Ακολουθιών</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto italic">
+                «Ἐν τῷ ναῷ ἑστῶτες τῆς δόξης σου, ἐν οὐρανῷ ἑστάναι νομίζομεν...»
+            </p>
+</section>
+<!-- Current Month Title -->
+<section class="px-margin-mobile mb-6">
+<div class="flex flex-col border-b border-outline/10 pb-4">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-[0.1em]">Σεπτέμβριος 2026</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Εβδομάδα 21 - 27 Σεπτεμβρίου</p>
+</div>
+</section>
+<!-- Print/Download Action -->
+<section class="px-margin-mobile mb-8">
+<button class="w-full flex items-center justify-center gap-3 py-4 bg-primary text-white font-label-md uppercase tracking-widest rounded-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+                Εκτύπωση Προγράμματος (PDF)
+            </button>
+</section>
+<!-- Today's Programme (Corrected with Master Content) -->
+<section class="px-margin-mobile mb-10">
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline/10 parchment-texture relative overflow-hidden shadow-sm">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">ΣΗΜΕΡΑ</span>
+<h3 class="font-headline-md text-2xl text-on-surface mt-1" id="current-date">Δευτέρα, 21 Σεπτεμβρίου</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Απόδοσις της Υψώσεως του Τιμίου Σταυρού</p>
+</div>
+<span class="material-symbols-outlined text-antique-gold opacity-40 text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="font-label-md text-label-md text-primary pt-1 w-12 shrink-0">06:00</span>
+<div>
+<h4 class="font-body-lg text-[18px] font-semibold text-on-surface leading-tight">Όρθρος</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Καθίσματα, Κανόνας &amp; Μεγάλη Δοξολογία</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-label-md text-label-md text-primary pt-1 w-12 shrink-0">07:30</span>
+<div>
+<h4 class="font-body-lg text-[18px] font-semibold text-on-surface leading-tight">Ώρες &amp; Θεία Λειτουργία</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Θεία Λειτουργία Αγίου Ιωάννου του Χρυσοστόμου</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-label-md text-label-md text-primary pt-1 w-12 shrink-0">17:00</span>
+<div>
+<h4 class="font-body-lg text-[18px] font-semibold text-on-surface leading-tight">Εσπερινός</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ακολουθία του Εσπερινού &amp; Παράκληση</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-label-md text-label-md text-primary pt-1 w-12 shrink-0">20:00</span>
+<div>
+<h4 class="font-body-lg text-[18px] font-semibold text-on-surface leading-tight">Απόδειπνο</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Μικρόν Απόδειπνον &amp; Χαιρετισμοί</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline/5 text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant/70 uppercase tracking-widest italic">
+                            * Ενδεικτικό πρόγραμμα - Ενδέχεται να υπάρξουν τροποποιήσεις
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Major Feast Highlight -->
+<section class="px-margin-mobile mb-10">
+<div class="bg-primary p-8 rounded-xl text-white relative overflow-hidden shadow-lg">
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary-fixed border-b border-white/20 pb-2 inline-block mb-6">Μεγάλη Εορτή</span>
+<h3 class="font-headline-md text-xl mb-2">26 Σεπτεμβρίου 2026</h3>
+<h4 class="font-headline-lg text-[22px] leading-snug mb-6 text-primary-fixed">Μετάσταση του Αγίου Ιωάννου του Θεολόγου</h4>
+<p class="font-body-sm text-body-sm opacity-90 italic border-l-2 border-antique-gold pl-4">
+                        Πανήγυρις του Καθολικού της Μονής μας. Η Ιερά Αγρυπνία θα ξεκινήσει την Παρασκευή στις 21:00.
+                    </p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[120px] opacity-10 pointer-events-none">auto_awesome</span>
+</div>
+</section>
+<!-- Announcements -->
+<section class="px-margin-mobile mb-10">
+<div class="bg-limestone/30 p-6 border border-outline/10 rounded-xl">
+<div class="flex items-center gap-3 mb-6 text-primary">
+<span class="material-symbols-outlined text-2xl">notifications_active</span>
+<h4 class="font-label-md text-label-md uppercase tracking-widest font-bold">Ανακοινώσεις</h4>
+</div>
+<div class="space-y-6">
+<div class="pl-4 border-l-2 border-antique-gold">
+<p class="font-body-sm text-body-sm font-bold text-primary mb-1">Αλλαγή ώρας Εσπερινού</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Από την 1η Οκτωβρίου, ο Εσπερινός θα τελείται στις 16:30 λόγω χειμερινού ωραρίου.</p>
+</div>
+<div class="pl-4 border-l-2 border-antique-gold">
+<p class="font-body-sm text-body-sm font-bold text-primary mb-1">Προσκύνημα Τιμίας Κάρας</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Καθ' όλη την εβδομάδα της εορτής, θα εκτίθεται το Ιερό Λείψανο του Ευαγγελιστού.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Overview (Cards) -->
+<section class="px-margin-mobile mb-12">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_note</span>
+                Εβδομαδιαίο Πρόγραμμα
+            </h3>
+<div class="space-y-4">
+<div class="p-5 bg-white border border-outline/10 rounded-lg shadow-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-3 border-b border-outline/5 pb-2">Τρίτη 22 / 9</h4>
+<p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+                        06:00 Όρθρος &amp; Ώρες<br>
+                        17:00 Εσπερινός &amp; Μικρόν Απόδειπνον
+                    </p>
+</div>
+<div class="p-5 bg-white border border-outline/10 rounded-lg shadow-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-3 border-b border-outline/5 pb-2">Τετάρτη 23 / 9</h4>
+<p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+                        06:00 Όρθρος &amp; Ώρες<br>
+                        21:00 Ιερά Αγρυπνία (Σύλληψις Προδρόμου)
+                    </p>
+</div>
+<div class="p-5 bg-white border border-outline/10 rounded-lg shadow-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-3 border-b border-outline/5 pb-2">Πέμπτη 24 / 9</h4>
+<p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+                        08:00 Θεία Λειτουργία<br>
+                        17:00 Εσπερινός &amp; Παράκληση
+                    </p>
+</div>
+<div class="p-5 bg-white border border-outline/10 rounded-lg shadow-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-3 border-b border-outline/5 pb-2">Παρασκευή 25 / 9</h4>
+<p class="font-body-sm text-body-sm leading-relaxed text-on-surface-variant">
+                        06:00 Όρθρος &amp; Ώρες<br>
+                        21:00 Μεγάλη Αγρυπνία (Μετάστασις Αγ. Ιωάννου)
+                    </p>
+</div>
+</div>
+</section>
+<!-- General / Recurring Programme -->
+<section class="px-margin-mobile mb-12">
+<div class="p-6 border border-outline/10 bg-surface-container rounded-xl">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-6 border-b border-outline/10 pb-3">Γενικό Πρόγραμμα</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-body-sm border-b border-outline/5 pb-2">
+<span class="text-on-surface-variant">Κυριακές</span>
+<span class="font-bold text-primary">06:30 - 10:30</span>
+</div>
+<div class="flex justify-between items-center text-body-sm border-b border-outline/5 pb-2">
+<span class="text-on-surface-variant">Καθημερινές</span>
+<span class="font-bold text-primary">06:00 - 08:30</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Αγρυπνίες</span>
+<span class="font-bold text-primary">21:00 - 02:30</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Utility Actions -->
+<section class="px-margin-mobile grid grid-cols-1 gap-4 mb-12">
+<a class="flex flex-col items-center justify-center p-8 bg-primary border border-primary text-white rounded-xl active:scale-[0.98] transition-transform shadow-md" href="#">
+<span class="material-symbols-outlined text-[32px] mb-3">directions_car</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Οδηγίες Μετάβασης</span>
+</a>
+<a class="flex flex-col items-center justify-center p-8 border border-primary text-primary bg-white rounded-xl active:scale-[0.98] transition-transform" href="tel:+302262062051">
+<span class="material-symbols-outlined text-[32px] mb-3">call</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Επικοινωνία</span>
+</a>
+</section>
+<!-- Atmosphere Image -->
+<section class="px-margin-mobile mb-12">
+<div class="w-full aspect-[16/9] rounded-2xl overflow-hidden grayscale-[0.2] sepia-[0.1] border border-outline/10 shadow-sm">
+<img alt="Μοναστηριακή ατμόσφαιρα" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm2Berrar-bsBCDxIGKDBk7RsInpsTGGThwQ9dSls7oVBQj7q3dXu3UJPT46TjXqpddOpc-xZSnj2yJLBzC1braHjNsRmiKfWjv3qhEfF1eppzqUOPaJxkuukfZgE0Q15-gyAPa4iq2rjLaDNNIG4-XK7iSfN-2CxOrcDLGVqOnmkNf-DXWFs0Mo2mA2rGXp_LKMtr9U6O2xJUhCQfQOpY7XTcctVdmhnhtvvXrZj3DBQiz8UGnthT7JHAmyVvtK0CV28a92TZk74">
+</div>
+</section>
+<!-- Decorative Divider -->
+<div class="px-margin-mobile py-8 flex items-center justify-center gap-4 opacity-20">
+<div class="h-[1px] flex-1 bg-primary"></div>
+<span class="material-symbols-outlined text-primary">church</span>
+<div class="h-[1px] flex-1 bg-primary"></div>
+</div>
+</main>
+<!-- Footer (Corrected with Master Content) -->
+<footer class="bg-surface-container py-12 pb-24 border-t border-outline/10">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="text-center mb-10">
+<div class="flex items-center justify-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">church</span>
+<div class="font-headline-md text-headline-md text-primary">Ιερά Μονή Μαζαράκι</div>
+</div>
+<div class="space-y-2 text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+<p>Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</p>
+<p>Μαζαράκι, Θήβα, Τ.Κ. 32200</p>
+<p class="mt-4 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        +30 22620 62051
+                    </p>
+<p class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        info@monimazaraki.gr
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-y-4 mb-10 text-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Ιστορία</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Μοναστική Ζωή</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Διακονήματα</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Νέα</a>
+</div>
+<div class="border-t border-outline/10 pt-8 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant/60">
+                    © 2026 Ιερά Μονή Αγίου Ιωάννου του Θεολόγου στο Μαζαράκι Βοιωτίας. Με επιφύλαξη παντός δικαιώματος.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-outline/5 z-50">
+<div class="flex justify-around items-center h-16 px-4">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-sm uppercase">Αρχικη</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="text-[10px] font-label-sm uppercase">Προγραμμα</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-[10px] font-label-sm uppercase">Τοποθεσια</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">more_horiz</span>
+<span class="text-[10px] font-label-sm uppercase">Μενού</span>
+</button>
+</div>
+</nav>
+<script>
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.scrolling-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Touch interaction feedback
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('touchstart', function() {
+                this.classList.add('opacity-70');
+            });
+            el.addEventListener('touchend', function() {
+                this.classList.remove('opacity-70');
+            });
+        });
+    </script>
+</body></html>

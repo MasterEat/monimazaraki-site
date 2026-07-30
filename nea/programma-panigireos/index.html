@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="el"><head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Πρόγραμμα Πανηγύρεως - Ιερά Μονή Αγίου Ιωάννου του Θεολόγου Μαζαρακίου</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Source+Sans+3:wght@200..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#0d513d",
+                    "on-secondary": "#ffffff",
+                    "background": "#fff8f4",
+                    "surface-dim": "#e2d8cf",
+                    "surface-container-high": "#f1e6dd",
+                    "surface-bright": "#fff8f4",
+                    "on-secondary-container": "#5e684b",
+                    "surface-container-lowest": "#ffffff",
+                    "parchment": "#F5F0E6",
+                    "tertiary-fixed": "#b1f0d5",
+                    "on-error": "#ffffff",
+                    "limestone": "#E8DFD0",
+                    "on-primary-fixed": "#3d0508",
+                    "surface-tint": "#954745",
+                    "on-surface-variant": "#544342",
+                    "secondary-container": "#dce7c2",
+                    "on-tertiary-fixed": "#002116",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#ffdad8",
+                    "on-tertiary-container": "#7ab79f",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#77302f",
+                    "surface-container-low": "#fcf2e8",
+                    "surface-container-highest": "#ebe1d7",
+                    "primary": "#511315",
+                    "surface-container": "#f6ece3",
+                    "tertiary": "#003023",
+                    "tertiary-container": "#004936",
+                    "antique-gold": "#B59A62",
+                    "secondary-fixed": "#dce7c2",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1f1b15",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#d9c1bf",
+                    "on-surface": "#1f1b15",
+                    "on-primary-container": "#f1918e",
+                    "inverse-on-surface": "#f9efe5",
+                    "surface-variant": "#ebe1d7",
+                    "outline": "#877271",
+                    "secondary": "#586245",
+                    "surface": "#fff8f4",
+                    "inverse-primary": "#ffb3b0",
+                    "primary-container": "#6e2929",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#414a2f",
+                    "primary-fixed-dim": "#ffb3b0",
+                    "secondary-fixed-dim": "#c0cba7",
+                    "tertiary-fixed-dim": "#95d3ba",
+                    "inverse-surface": "#353029",
+                    "on-secondary-fixed": "#161e07"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1140px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-sm": ["\"Source Serif 4\""],
+                    "headline-md": ["Libre Caslon Text"],
+                    "label-md": ["\"Source Sans 3\""],
+                    "headline-xl": ["Libre Caslon Text"],
+                    "label-sm": ["\"Source Sans 3\""],
+                    "body-lg": ["\"Source Serif 4\""],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "body-md": ["\"Source Serif 4\""]
+            },
+            "fontSize": {
+                    "body-sm": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "body-md": ["17px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fff8f4;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-content p {
+            margin-bottom: 1.5rem;
+        }
+        .editorial-content h2, .editorial-content h3 {
+            font-family: 'Libre Caslon Text', serif;
+            color: #511315;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .manuscript-border {
+            border-bottom: 1px solid rgba(84, 67, 66, 0.15);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-antique-gold/30">
+<!-- TopNavBar -->
+<header class="bg-parchment dark:bg-surface-container-low border-b border-outline-variant/15 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary leading-none">Ιερά Μονή</span>
+<span class="font-label-md text-label-md text-on-surface-variant tracking-widest uppercase">Αγίου Ιωάννου του Θεολόγου</span>
+</div>
+<nav class="hidden lg:flex items-center gap-8"><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../">Αρχική</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../i-moni/">Η Μονή</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../monaxiki-zoi/">Μοναχική Ζωή</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../diakonimata/">Διακονήματα</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../programma/">Πρόγραμμα</a><a class="text-primary font-bold border-b border-primary pb-1 transition-all duration-200" href="../../nea/">Νέα</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../episkepsi/">Επίσκεψη</a><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="../../epikoinonia/">Επικοινωνία</a></nav>
+<button class="lg:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
+<!-- Breadcrumbs -->
+<nav class="mb-12 flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="../../">Αρχική</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../../nea/">Νέα</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary">Πανηγύρεις</span>
+</nav>
+<!-- Article Header -->
+<div class="mb-12 md:mb-16">
+<span class="inline-block px-3 py-1 bg-primary/5 text-primary font-label-md text-label-md rounded-full mb-6 border border-primary/10">Πανηγύρεις</span>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight mb-6 max-w-4xl">Πρόγραμμα Πανηγύρεως της Μεταστάσεως του Αγίου Ιωάννου του Θεολόγου</h1>
+<div class="flex items-center gap-4 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<time class="font-label-md text-label-md" datetime="2026-09-10">10 Σεπτεμβρίου 2026</time>
+<span class="h-4 w-px bg-outline-variant/30 hidden md:block"></span>
+<span class="material-symbols-outlined text-lg hidden md:block">schedule</span>
+<span class="font-label-md text-label-md hidden md:block">Αναγνώριση: 4 λεπτά</span>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="mb-16">
+<figure class="relative aspect-[21/9] overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="A cinematic, wide-angle photograph of a Byzantine-style monastery courtyard at dusk. Warm golden light spills from the arched stone windows of the main temple (Katholikon) onto ancient paved stones. In the center, a decorative stone well stands surrounded by vibrant flowers. The lighting is low and atmospheric, emphasizing the textures of the limestone walls and the quiet, spiritual reverence of the site. Soft, misty evening atmosphere with deep burgundy accents in the hanging lanterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS4KStgEx1_pi4U6v3bZu06D9bI1pqqPVbr1BliScXElJhvW7ywvgU_8mFQrIuCqxACSJUlwIzYjUy2ItM4GQ8NuBfWxh5DjnaK7ZHnLLZE6i_XU9CgOk1oBgni8gHQ8CvAxxRxsQgFbiRlF2NkVYd5Ko2-p7HQwtNJoa0SnULqYXghvU4gLdnLT6CV9h6FQ1EfDuYQHG0IqwOYrvJSUx1W-OKqhbUexuloJx0YXP_dJf81X_R2YVPyA-suXWhobxljiiBqSlHehY">
+<figcaption class="mt-4 text-body-sm text-on-surface-variant italic opacity-80 text-right">Η Ιερά Μονή προετοιμάζεται για την μεγάλη εορτή του Ευαγγελιστή της Αγάπης.</figcaption>
+</figure>
+</div>
+<!-- Article Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Article Content -->
+<article class="lg:col-span-8 editorial-content">
+<div class="text-body-lg font-body-lg text-primary/90 leading-relaxed mb-12 dropcap-parchment">
+                    Με ιδιαίτερη ευλάβεια και κατάνυξη, η Ιερά Μονή Μαζαρακίου προσκαλεί τους πιστούς να συμμετάσχουν στις λατρευτικές εκδηλώσεις επί τη μνήμη της Μεταστάσεως του Αγίου ενδόξου Αποστόλου και Ευαγγελιστού Ιωάννου του Θεολόγου.
+                </div>
+<p class="">Ο Άγιος Ιωάννης, ο «μαθητής ον ηγάπα ο Ιησούς», αποτελεί τον προστάτη και έφορο της Μονής μας. Η φετινή πανήγυρις συμπίπτει με την ολοκλήρωση των εργασιών συντήρησης των τοιχογραφιών του Καθολικού, προσδίδοντας έναν ακόμη λόγο πνευματικής χαράς στην αδελφότητα και τους προσκυνητές.</p>
+<!-- Highlighted Programme Section -->
+<section class="my-16 p-8 md:p-12 bg-limestone border border-outline-variant/20 rounded-sm relative" style="opacity: 0; transform: translateY(20px); transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);">
+<span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-parchment px-4 text-primary font-headline-md">Το Πρόγραμμα των Ακολουθιών</span>
+<div class="space-y-10">
+<div class="grid md:grid-cols-4 gap-4 items-baseline">
+<div class="font-label-md text-primary uppercase tracking-tighter col-span-1">Παρασκευή 25/09</div>
+<div class="col-span-3">
+<h4 class="font-headline-md text-on-surface mb-2">Μέγας Πανηγυρικός Εσπερινός</h4>
+<p class="text-body-sm text-on-surface-variant">18:00 — Χοροστατούντος του Σεβασμιωτάτου Μητροπολίτου. Ακολουθεί η λιτάνευση της Ιεράς Εικόνος πέριξ του Καθολικού.</p>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10"></div>
+<div class="grid md:grid-cols-4 gap-4 items-baseline">
+<div class="font-label-md text-primary uppercase tracking-tighter col-span-1">Σάββατο 26/09</div>
+<div class="col-span-3">
+<h4 class="font-headline-md text-on-surface mb-2">Όρθρος &amp; Θεία Λειτουργία</h4>
+<p class="text-body-sm text-on-surface-variant">07:00 — Πανηγυρική Αρχιερατική Θεία Λειτουργία. Μετά το πέρας της ακολουθίας θα προσφερθεί μοναστηριακό κέρασμα στο αρχονταρίκι.</p>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10"></div>
+<div class="grid md:grid-cols-4 gap-4 items-baseline">
+<div class="font-label-md text-primary uppercase tracking-tighter col-span-1">Σάββατο 26/09</div>
+<div class="col-span-3">
+<h4 class="font-headline-md text-on-surface mb-2">Μεθέορτος Εσπερινός</h4>
+<p class="text-body-sm text-on-surface-variant">17:30 — Εσπερινός και Κτιτορικό Μνημόσυνο υπέρ αναπαύσεως των ψυχών των μακαρίων Κτιτόρων της Ιεράς Μονής.</p>
+</div>
+</div>
+</div>
+</section>
+<p class="">Παρακαλούνται οι προσκυνητές όπως τηρήσουν το ευπρεπές της ενδυμασίας και το ήσυχο του μοναστικού βίου κατά την παραμονή τους στους χώρους της Μονής. Η πύλη θα παραμείνει ανοικτή καθ' όλη τη διάρκεια των ακολουθιών.</p>
+<!-- Gallery Section -->
+<div class="mt-20">
+<h3 class="mb-8">Στιγμιότυπα από προηγούμενες Πανηγύρεις</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="aspect-square overflow-hidden bg-limestone group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed macro photograph of hand-painted Byzantine icons on a wooden iconostasis. The flickering light of a single beeswax candle illuminates the rich gold leaf and deep cinnabar red pigments. The atmosphere is ancient, focused on the textures of aged wood and the spiritual intensity of the saint's gaze. High-quality editorial style with soft bokeh in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF07igvekRs6iebOcKveVwWhtbWTZtYfo2sWxd1nehhwQQQTc33IjJIoKMMej2aVUr5I5Vt4hSZmavUsb_jUbDVWUzY_-gpdLNHVDxU3fqYG1JipTqdWdOz6HAPgpV8BznDVlIPK-pVbEZltSMsMmQ_d9v7q8zEhwF0ETetE74Xmp_zK1FRdIukwLKXgDQq5HGYbivIez3BzVzPLxPMwzr8RghsgJ77_9BVNScd5kt8vPK0IlUBFdhuftQW0Nc0HpIQ7rpzjvcQ1Y" style="opacity: 0; transform: translateY(20px); transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);">
+</div>
+<div class="aspect-square overflow-hidden bg-limestone group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-angle shot of monks in traditional black robes performing a procession in the monastery courtyard. They carry an ornate silver incense burner and a large, silver-clad icon of St. John. The surrounding stone architecture is bathed in soft, natural morning sunlight. Shadows are long and rhythmic, creating a sense of sacred movement. Minimalist composition with a focus on tradition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQqCkQ-HE0y-7NLVHSLvqkWJ6nEAW-eFaEiZTTml_Lb1ayeePluA-7FFR1E7OUHsouD-91kYkkEMPOFBMd7Y_TgqYrgk7eXFx9YHVoYxm7w1IY-pGjt2RNl_EOwrCmQcCvRUdWyHZEUk0IFKihfd7A7ZuSKih5DA6ttd9KtAwrD7NGR40b6Lwok_GKJXY2tKEjENpauUtvtGYXkSdVBAg-Bat3XscnYBjPbpVhxSwbcR-mMKq6tBClVRs1ME_5PSnglv0W3zOZ6M" style="opacity: 0; transform: translateY(20px); transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);">
+</div>
+<div class="aspect-square overflow-hidden bg-limestone group hidden md:block">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene landscape view of the monastery buildings nestled in the rugged, limestone hills of Boeotia. The architecture features traditional ceramic tile roofs and white stone walls. The surrounding nature is sparse and quiet, with a few olive trees standing as ancient sentinels. The light is diffused, suggesting a peaceful, early morning hour of prayer and solitude." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhDrA9eZ29O7SkcLlu-tXh8hUQNM2zppDzj3hV6SOx20XMyEUdVBvdO24aZb1zL-ouvk6obt9ox7-ZOpDMglQyvg6iW3kor-1ltZNnkt7fybz4-fsPX6MmgqbKGUxlJXuLImKAg6ZpHn90bgh9jH8Jrn_er0-7sG67SzhiYoLSCegZKDndZ_2Rn6XgDKKGXHiRlat4BqBqR98pPfD2zNuWfVSIQSFzUSWwzJQtboFw6Fn2X543dNylu8gMuRmrkHhWhpiBZshhaA" style="opacity: 0; transform: translateY(20px); transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);">
+</div>
+</div>
+</div>
+<!-- Footer of Article -->
+<div class="mt-16 pt-8 border-t border-outline-variant/10 flex flex-wrap justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 border border-primary/20 text-primary font-label-md text-label-md hover:bg-primary/5 transition-all" onclick="window.print()">
+<span class="material-symbols-outlined text-lg">print</span>
+                            ΕΚΤΥΠΩΣΗ ΠΡΟΓΡΑΜΜΑΤΟΣ
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg">share</span>
+                            ΚΟΙΝΟΠΟΙΗΣΗ
+                        </button>
+</div>
+<div class="flex gap-2">
+<span class="inline-block px-3 py-1 bg-limestone text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">ΕΟΡΤΗ</span>
+<span class="inline-block px-3 py-1 bg-limestone text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">ΘΕΟΛΟΓΟΣ</span>
+</div>
+</div>
+<!-- Navigation Prev/Next -->
+<div class="mt-16 grid grid-cols-2 gap-4 border-y border-outline-variant/10 py-12">
+<a class="group" href="#">
+<span class="block font-label-sm text-label-sm text-on-surface-variant/50 uppercase mb-2">Προηγουμενο</span>
+<span class="block font-headline-md text-on-surface group-hover:text-primary transition-colors">Ολοκλήρωση Συντήρησης Τοιχογραφιών</span>
+</a>
+<a class="group text-right" href="#">
+<span class="block font-label-sm text-label-sm text-on-surface-variant/50 uppercase mb-2">Επομενο</span>
+<span class="block font-headline-md text-on-surface group-hover:text-primary transition-colors">Φωτορεπορτάζ από την Πανήγυρη</span>
+</a>
+</div>
+</article>
+<!-- Right: Sidebar -->
+<aside class="lg:col-span-4 space-y-16">
+<!-- Related Content -->
+<div class="bg-limestone/40 p-8 border border-outline-variant/10">
+<h3 class="font-headline-md text-primary mb-8 border-b border-primary/10 pb-4">Σχετικές Ανακοινώσεις</h3>
+<ul class="space-y-8">
+<li class="">
+<a class="group block" href="#">
+<span class="block font-label-sm text-label-sm text-antique-gold uppercase mb-2">ΟΔΗΓΙΕΣ</span>
+<h4 class="font-body-md text-on-surface group-hover:text-primary transition-colors leading-snug">Ώρες προσέλευσης κατά την ημέρα της πανηγύρεως</h4>
+</a>
+</li>
+<li class="">
+<a class="group block" href="#">
+<span class="block font-label-sm text-label-sm text-antique-gold uppercase mb-2">ΑΝΑΚΟΙΝΩΣΗ</span>
+<h4 class="font-body-md text-on-surface group-hover:text-primary transition-colors leading-snug">Ανακοίνωση για το πρόγραμμα των ακολουθιών</h4>
+</a>
+</li>
+<li class="">
+<a class="group block" href="#">
+<span class="block font-label-sm text-label-sm text-antique-gold uppercase mb-2">ΠΡΟΣΒΑΣΗ</span>
+<h4 class="font-body-md text-on-surface group-hover:text-primary transition-colors leading-snug">Οδηγίες πρόσβασης προς την Ιερά Μονή</h4>
+</a>
+</li>
+</ul>
+</div>
+<!-- Call to Action Card -->
+<div class="p-8 border border-primary/10 relative overflow-hidden bg-parchment">
+<div class="relative z-10">
+<h3 class="font-headline-md text-primary mb-4">Ενημερωτικό Δελτίο</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Λαμβάνετε τις ανακοινώσεις και τα πνευματικά μηνύματα της Μονής απευθείας στο ηλεκτρονικό σας ταχυδρομείο.</p>
+<form class="space-y-4">
+<input class="w-full bg-white border border-outline-variant/30 px-4 py-2 font-label-md focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Email" type="email">
+<button class="w-full py-3 border border-primary text-primary font-label-md uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">ΕΓΓΡΑΦΗ</button>
+</form>
+</div>
+<!-- Subtle watermark-like logo -->
+<span class="material-symbols-outlined absolute -bottom-8 -right-8 text-9xl text-primary/5 pointer-events-none">auto_awesome</span>
+</div>
+<!-- Quote / Spiritual Word -->
+<div class="text-center px-4">
+<span class="material-symbols-outlined text-antique-gold/40 text-4xl mb-4">format_quote</span>
+<p class="font-body-md italic text-on-surface-variant">«Ο Θεός αγάπη εστί, και ο μένων εν τη αγάπη εν τω Θεώ μένει και ο Θεός εν αυτώ.»</p>
+<span class="block mt-4 font-label-sm text-label-sm text-primary uppercase tracking-widest">— Ιωάννης ο Θεολόγος</span>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-limestone dark:bg-surface-dim border-t border-outline-variant/10"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto items-start"><div class="space-y-6"><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span><span class="font-label-md text-label-md text-on-surface-variant tracking-widest uppercase">ΜΑΖΑΡΑΚΙ ΒΑΓΙΩΝ</span></div><p class="font-body-sm text-body-sm text-on-surface-variant/80 max-w-xs">Ένας ιερός τόπος αφιερωμένος στην προσευχή, τη μοναχική άσκηση και την διαφύλαξη της Ορθόδοξης Παράδοσης στην καρδιά της Βοιωτίας.</p><div class="flex gap-4"><span class="w-10 h-10 border border-outline-variant/30 flex items-center justify-center hover:text-primary cursor-pointer transition-colors text-xs font-bold">FB</span><span class="w-10 h-10 border border-outline-variant/30 flex items-center justify-center hover:text-primary cursor-pointer transition-colors text-xs font-bold">YT</span></div></div><div class="grid grid-cols-1 gap-4"><h4 class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">ΣΥΝΔΕΣΜΟΙ</h4><nav class="flex flex-col gap-2"><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="../../programma/">Πρόγραμμα Ακολουθιών</a><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="../../nea/">Νέα &amp; Ανακοινώσεις</a><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="../../episkepsi/">Οδηγίες Επίσκεψης</a><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Πολιτική Απορρήτου</a><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Όροι Χρήσης</a><a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Χάρτης Ιστότοπου</a></nav></div><div class="space-y-4"><h4 class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">ΕΠΙΚΟΙΝΩΝΙΑ</h4><div class="font-body-sm text-on-surface-variant space-y-2"><p class="">Μαζαράκι Βαγίων, Βοιωτία, Θήβα 320 02</p><p class="">Τηλ: 22620 62051</p><p class="">Email: info@monimazaraki.gr</p><p class="">Website: monimazaraki.gr</p></div><div class="flex gap-4 pt-4"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">map</span></a></div></div></div><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/10"><p class="font-body-sm text-body-sm text-on-surface-variant/60 text-center md:text-left">© 2026 Ιερά Μονή Αγίου Ιωάννου του Θεολόγου Μαζαρακίου. Με επιφύλαξη παντός δικαιώματος.</p></div></footer>
+<script>
+        // Micro-interaction for gallery images fade-in on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.editorial-content section, .group img').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

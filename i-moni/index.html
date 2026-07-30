@@ -161,8 +161,22 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
 </div>
 <div class="flex gap-4 text-primary lg:hidden">
-<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">menu</span>
+<button class="cursor-pointer hover:opacity-70 transition-opacity" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-navigation">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div></div>
+<div id="mobile-navigation" class="hidden lg:hidden border-t border-outline/10 bg-parchment dark:bg-surface-container-low" hidden>
+<div class="max-w-container-max mx-auto py-2 font-label-md text-label-md" role="navigation" aria-label="Κύρια πλοήγηση για κινητά">
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../">Αρχική</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../i-moni/">Η Μονή</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../monaxiki-zoi/">Μοναχική Ζωή</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../diakonimata/">Διακονήματα</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../programma/">Πρόγραμμα</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../nea/">Νέα</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../episkepsi/">Επίσκεψη</a>
+<a class="block px-6 py-3 text-on-surface-variant hover:text-primary transition-colors" href="../epikoinonia/">Επικοινωνία</a>
+</div>
+</div>
 </header>
 <main>
 <!-- Hero Section -->
@@ -398,4 +412,5 @@
     </script>
 
 
+<script src="../assets/js/mobile-menu.js"></script>
 </body></html>

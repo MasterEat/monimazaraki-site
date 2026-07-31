@@ -37,7 +37,7 @@
         }
     });
 
-    const desktop = window.matchMedia('(min-width: 1024px)');
+    const desktop = window.matchMedia('(min-width: 1280px)');
     const handleDesktopChange = (event) => {
         if (event.matches) closeMenu();
     };

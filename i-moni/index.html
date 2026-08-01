@@ -142,7 +142,9 @@
         [data-overlay-header] .site-header-nav a,
         [data-overlay-header] .site-header-menu-button {
             color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+            text-shadow:
+                0 1px 2px rgba(0, 0, 0, 0.75),
+                0 3px 10px rgba(0, 0, 0, 0.45);
             transition:
                 color 300ms ease,
                 border-color 300ms ease,
@@ -180,6 +182,21 @@
         }
         [data-overlay-header].site-header.is-scrolled .site-header-active-link {
             border-bottom-color: #511315;
+        }
+        .hero-header-contrast {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(
+                to bottom,
+                rgba(20, 14, 12, 0.58) 0%,
+                rgba(20, 14, 12, 0.36) 45%,
+                rgba(20, 14, 12, 0.12) 75%,
+                rgba(20, 14, 12, 0) 100%
+            );
+            pointer-events: none;
         }
         @media (prefers-reduced-motion: reduce) {
             .site-header,
@@ -237,7 +254,8 @@
 <img alt="Πανοραμική άποψη του πέτρινου ναού και της εσωτερικής αυλής της Μονής Μαζαρακίου" class="w-full h-full object-cover" fetchpriority="high" src="../assets/images/monastery/naos-avli-ieras-monis-mazaraki.webp">
 <div class="absolute inset-0 bg-gradient-to-t from-parchment/90 via-transparent to-transparent"></div>
 </div>
-<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop pb-16">
+<div class="hero-header-contrast z-10" aria-hidden="true"></div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-margin-desktop pb-16">
 <p class="font-label-md text-label-md text-primary uppercase tracking-[0.2em] mb-4">Η ιστορία της Μονής</p>
 <h1 class="font-headline-xl text-headline-xl text-primary max-w-3xl leading-tight">
                     Ιερά Μονή Αγίου Ιωάννου του Θεολόγου Μαζαρακίου

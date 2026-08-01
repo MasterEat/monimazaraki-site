@@ -140,7 +140,9 @@
       [data-overlay-header] .site-header-nav a,
       [data-overlay-header] .site-header-menu-button {
         color: #ffffff;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+        text-shadow:
+          0 1px 2px rgba(0, 0, 0, 0.75),
+          0 3px 10px rgba(0, 0, 0, 0.45);
         transition:
           color 300ms ease,
           border-color 300ms ease,
@@ -178,6 +180,21 @@
       }
       [data-overlay-header].site-header.is-scrolled .site-header-active-link {
         border-bottom-color: #511315;
+      }
+      .hero-header-contrast {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        background: linear-gradient(
+          to bottom,
+          rgba(20, 14, 12, 0.58) 0%,
+          rgba(20, 14, 12, 0.36) 45%,
+          rgba(20, 14, 12, 0.12) 75%,
+          rgba(20, 14, 12, 0) 100%
+        );
+        pointer-events: none;
       }
       @keyframes bellFloat {
         0%, 100% {
@@ -248,6 +265,7 @@
 <div class="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/20 to-transparent z-10"></div>
 <img alt="Ο πέτρινος ναός και οι καμπάνες της Ιεράς Μονής Αγίου Ιωάννου του Θεολόγου στο Μαζαράκι" class="w-full h-full object-cover object-center" fetchpriority="high" src="assets/images/monastery/hero-naos-kampanes-monis-mazaraki.webp">
 </div>
+<div class="hero-header-contrast z-10" aria-hidden="true"></div>
 <div class="relative z-20 max-w-container-max mx-auto px-6 md:px-margin-desktop w-full">
 <div class="max-w-3xl">
 <div class="w-24 h-[1px] bg-antique-gold mb-8"></div>

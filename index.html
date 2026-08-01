@@ -123,6 +123,19 @@
       .timeline-item:last-child .timeline-dot::after {
         display: none;
       }
+      @keyframes bellFloat {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(4px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .bell-scroll-animation {
+          animation: none !important;
+        }
+      }
     </style>
 </head>
 <body class="font-body-md text-body-md antialiased overflow-x-hidden bg-parchment">
@@ -191,13 +204,18 @@
 </div>
 </div>
 </div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-60">
-<span class="font-label-sm uppercase tracking-widest text-[10px] text-white">Scroll</span>
-<span class="w-[1px] h-12 bg-white"></span>
-</div>
+<a aria-label="Μετάβαση στο επόμενο περιεχόμενο" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-white/80 hover:text-antique-gold transition-colors duration-300" href="#welcome">
+<span class="inline-flex animate-[bellFloat_2.4s_ease-in-out_infinite] bell-scroll-animation">
+<svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+<path d="M7 17h10l-1.2-2.1V10a3.8 3.8 0 0 0-7.6 0v4.9L7 17Z"></path>
+<path d="M10 19a2.2 2.2 0 0 0 4 0M12 6.2V4.8"></path>
+</svg>
+</span>
+<span class="w-px h-8 bg-current opacity-60"></span>
+</a>
 </section>
 <!-- Welcome Section -->
-<section class="py-24 md:py-32 bg-background">
+<section class="py-24 md:py-32 bg-background" id="welcome">
 <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 <div class="md:col-span-7">

@@ -21,11 +21,11 @@
     };
 
     const openMenu = () => {
+        updateOverlayHeaderState(true);
         navigation.hidden = false;
         navigation.classList.remove('hidden');
         button.setAttribute('aria-expanded', 'true');
         button.setAttribute('aria-label', 'Κλείσιμο μενού');
-        updateOverlayHeaderState(true);
     };
 
     button.addEventListener('click', () => {

@@ -148,6 +148,13 @@
           border-color 300ms ease,
           text-shadow 300ms ease;
       }
+      [data-overlay-header].site-header.is-menu-open,
+      [data-overlay-header].site-header.is-menu-open .site-header-title,
+      [data-overlay-header].site-header.is-menu-open .site-header-nav a,
+      [data-overlay-header].site-header.is-menu-open .site-header-menu-button,
+      [data-overlay-header].site-header.is-menu-open .site-header-active-link {
+        transition: none;
+      }
       [data-overlay-header] .site-header-nav a:not(.site-header-active-link) {
         color: rgba(255, 255, 255, 0.9);
       }

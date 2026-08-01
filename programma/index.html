@@ -107,19 +107,95 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
-        .scrolling-header {
-            transition: all 0.4s ease;
+        [data-overlay-header].site-header {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            transition:
+                background-color 300ms ease,
+                border-color 300ms ease,
+                box-shadow 300ms ease,
+                -webkit-backdrop-filter 300ms ease,
+                backdrop-filter 300ms ease;
         }
-        .scrolled {
-            height: 4.5rem !important;
-            background-color: rgba(255, 248, 244, 0.98) !important;
-            box-shadow: 0 4px 20px -5px rgba(81, 19, 21, 0.1);
+        [data-overlay-header] .site-header-title,
+        [data-overlay-header] .site-header-nav a,
+        [data-overlay-header] .site-header-menu-button {
+            color: #ffffff;
+            text-shadow:
+                0 1px 2px rgba(0, 0, 0, 0.75),
+                0 3px 10px rgba(0, 0, 0, 0.45);
+            transition:
+                color 300ms ease,
+                border-color 300ms ease,
+                text-shadow 300ms ease;
+        }
+        [data-overlay-header] .site-header-nav a:not(.site-header-active-link) {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        [data-overlay-header] .site-header-nav a:not(.site-header-active-link):hover {
+            color: #ffffff;
+        }
+        [data-overlay-header] .site-header-active-link {
+            color: #ffffff;
+            border-bottom-color: #B59A62;
+        }
+        [data-overlay-header].site-header.is-scrolled {
+            background-color: rgba(255, 248, 244, 0.95);
+            border-color: rgba(135, 114, 113, 0.1);
+            box-shadow: 0 4px 18px rgba(31, 27, 21, 0.08);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+        [data-overlay-header].site-header.is-scrolled .site-header-title,
+        [data-overlay-header].site-header.is-scrolled .site-header-menu-button,
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
+            color: #511315;
+            text-shadow: none;
+        }
+        [data-overlay-header].site-header.is-scrolled
+        .site-header-nav a:not(.site-header-active-link) {
+            color: #544342;
+            text-shadow: none;
+        }
+        [data-overlay-header].site-header.is-scrolled
+        .site-header-nav a:not(.site-header-active-link):hover {
+            color: #511315;
+        }
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
+            border-bottom-color: #511315;
+        }
+        .hero-header-contrast {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(
+                to bottom,
+                rgba(20, 14, 12, 0.58) 0%,
+                rgba(20, 14, 12, 0.36) 45%,
+                rgba(20, 14, 12, 0.12) 75%,
+                rgba(20, 14, 12, 0) 100%
+            );
+            pointer-events: none;
         }
         .parchment-texture {
             background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
         }
         .monastic-border {
             border: 1px solid rgba(81, 19, 21, 0.12);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .site-header,
+            .site-header-title,
+            .site-header-nav a,
+            .site-header-menu-button,
+            .site-header-active-link {
+                transition-duration: 0.01ms;
+            }
         }
         @media print {
             .no-print { display: none !important; }
@@ -130,29 +206,32 @@
 <link rel="stylesheet" href="../assets/css/back-to-top.css">
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed-dim selection:text-primary">
-<header class="fixed top-0 w-full z-50 border-b border-outline/10 bg-background/95 backdrop-blur-sm scrolling-header no-print"><div class="w-full px-5 md:px-8 xl:px-10 flex justify-between items-center h-20 md:h-24">
+<header
+  class="site-header fixed top-0 w-full z-50 border-b no-print"
+  data-overlay-header
+><div class="w-full px-5 md:px-8 xl:px-10 flex justify-between items-center h-20 md:h-24">
 <a class="site-identity-link flex items-center gap-4 shrink-0 min-w-0" href="../" aria-label="Μετάβαση στην αρχική σελίδα">
 <img alt="Λογότυπο Ιεράς Μονής Αγίου Ιωάννου του Θεολόγου Μαζαρακίου" class="w-14 h-14 object-contain" decoding="async" height="1600" src="../assets/images/branding/logo-iera-moni-agiou-ioannou-theologou-mazaraki.webp" width="1600">
 <div class="flex flex-col">
-<span class="sm:hidden font-headline-md text-[15px] leading-[1.2] text-primary">
+<span class="site-header-title sm:hidden font-headline-md text-[15px] leading-[1.2]">
 <span class="block whitespace-nowrap">Ι. Μ. Αγίου Ιωάννου</span>
 <span class="block whitespace-nowrap">Θεολόγου «Μαζαράκι»</span>
 </span>
-<span class="hidden sm:block font-headline-md text-[18px] md:text-[20px] leading-tight text-primary whitespace-nowrap">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span>
+<span class="site-header-title hidden sm:block font-headline-md text-[18px] md:text-[20px] leading-tight whitespace-nowrap">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span>
 <span class="font-label-sm text-antique-gold tracking-widest hidden md:block">ΜΑΖΑΡΑΚΙ ΒΑΓΙΩΝ</span>
 </div>
 </a>
-<div class="hidden xl:flex items-center h-full gap-7 2xl:gap-9 font-label-md text-label-md ml-auto">
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../">Αρχική</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../i-moni/">Η Μονή</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../monaxiki-zoi/">Μοναχική Ζωή</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../diakonimata/">Διακονήματα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-primary text-primary transition-colors duration-300" href="../programma/">Πρόγραμμα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../nea/">Νέα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../episkepsi/">Επίσκεψη</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
+<div class="site-header-nav hidden xl:flex items-center h-full gap-7 2xl:gap-9 font-label-md text-label-md ml-auto">
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../">Αρχική</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../i-moni/">Η Μονή</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../monaxiki-zoi/">Μοναχική Ζωή</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../diakonimata/">Διακονήματα</a>
+<a class="site-header-active-link inline-flex items-center whitespace-nowrap py-2 border-b-2 transition-colors duration-300" href="../programma/">Πρόγραμμα</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../nea/">Νέα</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../episkepsi/">Επίσκεψη</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
 </div>
-<div class="flex items-center shrink-0 ml-3 text-primary xl:hidden">
+<div class="flex items-center shrink-0 ml-3 xl:hidden">
 <button class="cursor-pointer inline-flex items-center justify-center w-11 h-11 flex-none site-header-menu-button mobile-menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-navigation">
 <span class="mobile-menu-icon" aria-hidden="true">
 <span class="mobile-menu-icon-bar"></span>
@@ -174,7 +253,7 @@
 </div>
 </div>
 </header>
-<main class="pt-24 min-h-screen print-area">
+<main class="min-h-screen print-area">
 <!-- Hero Section -->
 <section class="relative h-[500px] flex items-center justify-center overflow-hidden no-print">
 <div class="absolute inset-0 z-0">
@@ -182,7 +261,11 @@
 <div class="absolute inset-0 bg-primary/25 mix-blend-multiply"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background"></div>
 </div>
-<div class="relative z-10 text-center px-margin-mobile mt-12">
+<div
+  class="hero-header-contrast z-10"
+  aria-hidden="true"
+></div>
+<div class="relative z-20 text-center px-margin-mobile mt-12">
 <h1 class="font-headline-xl text-headline-xl text-primary mb-6 tracking-tight">Πρόγραμμα Ιερών Ακολουθιών</h1>
 <div class="w-24 h-[2px] bg-antique-gold mx-auto mb-6"></div>
 <p class="font-body-lg text-body-lg max-w-2xl mx-auto italic text-on-surface/80">«Ἐν τῷ ναῷ ἑστῶτες τῆς δόξης σου, ἐν οὐρανῷ ἑστάναι νομίζομεν...»</p>
@@ -370,21 +453,6 @@
 </div>
 </div></footer>
 <script>
-    // Header scroll behavior
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        const inner = header.querySelector('div');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-            inner.classList.remove('h-24');
-            inner.classList.add('h-16');
-        } else {
-            header.classList.remove('scrolled');
-            inner.classList.remove('h-16');
-            inner.classList.add('h-24');
-        }
-    });
-
     // Simple interaction for schedule items
     document.querySelectorAll('.group').forEach(item => {
         item.addEventListener('mouseenter', () => {
@@ -398,6 +466,7 @@
 
 
 <script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/header-scroll.js" defer></script>
 <script src="../assets/js/back-to-top.js" defer></script>
 <button
   class="back-to-top"

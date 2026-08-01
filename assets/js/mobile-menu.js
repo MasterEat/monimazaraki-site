@@ -4,11 +4,19 @@
 
     if (!button || !navigation) return;
 
+    const overlayHeader = button.closest('[data-overlay-header]');
+
+    const updateOverlayHeaderState = (isOpen) => {
+        if (!overlayHeader) return;
+        overlayHeader.classList.toggle('is-menu-open', isOpen);
+    };
+
     const closeMenu = (returnFocus = false) => {
         navigation.hidden = true;
         navigation.classList.add('hidden');
         button.setAttribute('aria-expanded', 'false');
         button.setAttribute('aria-label', 'Άνοιγμα μενού');
+        updateOverlayHeaderState(false);
         if (returnFocus) button.focus();
     };
 
@@ -17,6 +25,7 @@
         navigation.classList.remove('hidden');
         button.setAttribute('aria-expanded', 'true');
         button.setAttribute('aria-label', 'Κλείσιμο μενού');
+        updateOverlayHeaderState(true);
     };
 
     button.addEventListener('click', () => {

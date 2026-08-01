@@ -8,7 +8,7 @@
     let ticking = false;
 
     const updateHeaders = () => {
-        const isScrolled = window.scrollY > 24;
+        const isScrolled = window.scrollY > 96;
         headers.forEach((header) => header.classList.toggle('is-scrolled', isScrolled));
         ticking = false;
     };

@@ -126,8 +126,7 @@
             .print-area { width: 100% !important; margin: 0 !important; padding: 0 !important; }
         }
     </style>
-<link href="../assets/css/back-to-top.css" rel="stylesheet">
-<script src="../assets/js/back-to-top.js" defer></script>
+
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed-dim selection:text-primary">
 <header class="fixed top-0 w-full z-50 border-b border-outline/10 bg-background/95 backdrop-blur-sm scrolling-header no-print"><div class="w-full px-5 md:px-8 xl:px-10 flex justify-between items-center h-20 md:h-24">
@@ -153,8 +152,12 @@
 <a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
 </div>
 <div class="flex items-center shrink-0 ml-3 text-primary xl:hidden">
-<button class="cursor-pointer hover:opacity-70 transition-opacity inline-flex items-center justify-center w-11 h-11 flex-none" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-navigation">
-<span class="material-symbols-outlined">menu</span>
+<button class="cursor-pointer inline-flex items-center justify-center w-11 h-11 flex-none site-header-menu-button mobile-menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-navigation">
+<span class="mobile-menu-icon" aria-hidden="true">
+<span class="mobile-menu-icon-bar"></span>
+<span class="mobile-menu-icon-bar"></span>
+<span class="mobile-menu-icon-bar"></span>
+</span>
 </button>
 </div>
 </div><div id="mobile-navigation" class="hidden xl:hidden border-t border-outline/10 bg-background/95" hidden>

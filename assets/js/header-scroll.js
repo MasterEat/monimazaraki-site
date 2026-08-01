@@ -5,10 +5,12 @@
         return;
     }
 
+    const desktopQuery = window.matchMedia('(min-width: 768px)');
     let ticking = false;
 
     const updateHeaders = () => {
-        const isScrolled = window.scrollY > 96;
+        const scrollThreshold = desktopQuery.matches ? 96 : 48;
+        const isScrolled = window.scrollY > scrollThreshold;
         headers.forEach((header) => header.classList.toggle('is-scrolled', isScrolled));
         ticking = false;
     };
@@ -22,4 +24,5 @@
 
     updateHeaders();
     window.addEventListener('scroll', requestUpdate, { passive: true });
+    desktopQuery.addEventListener('change', requestUpdate);
 })();

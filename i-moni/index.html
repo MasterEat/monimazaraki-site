@@ -125,50 +125,60 @@
             height: 100%;
             background-color: rgba(81, 19, 21, 0.2);
         }
-        .site-header {
+        [data-overlay-header].site-header {
             background-color: transparent;
             border-color: transparent;
             box-shadow: none;
             -webkit-backdrop-filter: none;
             backdrop-filter: none;
-            transition: background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, -webkit-backdrop-filter 300ms ease, backdrop-filter 300ms ease;
+            transition:
+                background-color 300ms ease,
+                border-color 300ms ease,
+                box-shadow 300ms ease,
+                -webkit-backdrop-filter 300ms ease,
+                backdrop-filter 300ms ease;
         }
-        .site-header-title,
-        .site-header-nav a,
-        .site-header-menu-button {
-            color: white;
+        [data-overlay-header] .site-header-title,
+        [data-overlay-header] .site-header-nav a,
+        [data-overlay-header] .site-header-menu-button {
+            color: #ffffff;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-            transition: color 300ms ease;
+            transition:
+                color 300ms ease,
+                border-color 300ms ease,
+                text-shadow 300ms ease;
         }
-        .site-header-nav a:not(.site-header-active-link) {
+        [data-overlay-header] .site-header-nav a:not(.site-header-active-link) {
             color: rgba(255, 255, 255, 0.9);
         }
-        .site-header-nav a:not(.site-header-active-link):hover {
-            color: white;
+        [data-overlay-header] .site-header-nav a:not(.site-header-active-link):hover {
+            color: #ffffff;
         }
-        .site-header-active-link {
+        [data-overlay-header] .site-header-active-link {
+            color: #ffffff;
             border-bottom-color: #B59A62;
-            transition: color 300ms ease, border-color 300ms ease;
         }
-        .site-header.is-scrolled {
+        [data-overlay-header].site-header.is-scrolled {
             background-color: #F5F0E6;
             border-color: rgba(217, 193, 191, 0.15);
             box-shadow: 0 4px 18px rgba(31, 27, 21, 0.08);
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
         }
-        .site-header.is-scrolled .site-header-title,
-        .site-header.is-scrolled .site-header-menu-button,
-        .site-header.is-scrolled .site-header-active-link {
+        [data-overlay-header].site-header.is-scrolled .site-header-title,
+        [data-overlay-header].site-header.is-scrolled .site-header-menu-button,
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
             color: #511315;
             text-shadow: none;
         }
-        .site-header.is-scrolled .site-header-nav a:not(.site-header-active-link) {
+        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link) {
             color: #544342;
             text-shadow: none;
         }
-        .site-header.is-scrolled .site-header-nav a:not(.site-header-active-link):hover {
+        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link):hover {
             color: #511315;
         }
-        .site-header.is-scrolled .site-header-active-link {
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
             border-bottom-color: #511315;
         }
         @media (prefers-reduced-motion: reduce) {
@@ -183,26 +193,26 @@
     </style>
 </head>
 <body class="font-body-md text-body-md">
-<header class="site-header fixed top-0 w-full z-50 bg-parchment dark:bg-surface-container-low border-b border-outline-variant/15" data-overlay-header>
+<header class="site-header fixed top-0 w-full z-50 border-b" data-overlay-header>
 <div class="w-full px-5 md:px-8 xl:px-10 flex justify-between items-center h-20 md:h-24"><div class="flex items-center gap-4 shrink-0 min-w-0">
 <img alt="Λογότυπο Ιεράς Μονής Αγίου Ιωάννου του Θεολόγου Μαζαρακίου" class="w-14 h-14 object-contain" decoding="async" height="1600" src="../assets/images/branding/logo-iera-moni-agiou-ioannou-theologou-mazaraki.webp" width="1600">
 <div class="flex flex-col">
-<span class="site-header-title sm:hidden font-headline-md text-[17px] leading-tight text-primary whitespace-nowrap">Μονή Μαζαράκι</span>
-<span class="site-header-title hidden sm:block font-headline-md text-[18px] md:text-[20px] leading-tight text-primary whitespace-nowrap">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span>
+<span class="site-header-title sm:hidden font-headline-md text-[17px] leading-tight whitespace-nowrap">Μονή Μαζαράκι</span>
+<span class="site-header-title hidden sm:block font-headline-md text-[18px] md:text-[20px] leading-tight whitespace-nowrap">Ιερά Μονή Αγίου Ιωάννου του Θεολόγου</span>
 <span class="font-label-sm text-antique-gold tracking-widest hidden md:block">ΜΑΖΑΡΑΚΙ ΒΑΓΙΩΝ</span>
 </div>
 </div>
 <div class="site-header-nav hidden xl:flex items-center h-full gap-7 2xl:gap-9 font-label-md text-label-md ml-auto">
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../">Αρχική</a>
-<a class="site-header-active-link inline-flex items-center whitespace-nowrap py-2 border-b-2 border-primary text-primary transition-colors duration-300" href="../i-moni/">Η Μονή</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../monaxiki-zoi/">Μοναχική Ζωή</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../diakonimata/">Διακονήματα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../programma/">Πρόγραμμα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../nea/">Νέα</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../episkepsi/">Επίσκεψη</a>
-<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../">Αρχική</a>
+<a class="site-header-active-link inline-flex items-center whitespace-nowrap py-2 border-b-2 transition-colors duration-300" href="../i-moni/">Η Μονή</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../monaxiki-zoi/">Μοναχική Ζωή</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../diakonimata/">Διακονήματα</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../programma/">Πρόγραμμα</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../nea/">Νέα</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../episkepsi/">Επίσκεψη</a>
+<a class="inline-flex items-center whitespace-nowrap py-2 border-b-2 border-transparent transition-colors duration-300" href="../epikoinonia/">Επικοινωνία</a>
 </div>
-<div class="flex items-center shrink-0 ml-3 text-primary xl:hidden">
+<div class="flex items-center shrink-0 ml-3 xl:hidden">
 <button class="site-header-menu-button cursor-pointer hover:opacity-70 transition-opacity inline-flex items-center justify-center w-11 h-11 flex-none" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-navigation">
 <span class="material-symbols-outlined">menu</span>
 </button>

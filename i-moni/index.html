@@ -160,7 +160,8 @@
             color: #ffffff;
             border-bottom-color: #B59A62;
         }
-        [data-overlay-header].site-header.is-scrolled {
+        [data-overlay-header].site-header.is-scrolled,
+        [data-overlay-header].site-header.is-menu-open {
             background-color: #F5F0E6;
             border-color: rgba(217, 193, 191, 0.15);
             box-shadow: 0 4px 18px rgba(31, 27, 21, 0.08);
@@ -168,20 +169,29 @@
             backdrop-filter: none;
         }
         [data-overlay-header].site-header.is-scrolled .site-header-title,
+        [data-overlay-header].site-header.is-menu-open .site-header-title,
         [data-overlay-header].site-header.is-scrolled .site-header-menu-button,
-        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
+        [data-overlay-header].site-header.is-menu-open .site-header-menu-button,
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link,
+        [data-overlay-header].site-header.is-menu-open .site-header-active-link {
             color: #511315;
             text-shadow: none;
         }
-        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link) {
+        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link),
+        [data-overlay-header].site-header.is-menu-open .site-header-nav a:not(.site-header-active-link) {
             color: #544342;
             text-shadow: none;
         }
-        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link):hover {
+        [data-overlay-header].site-header.is-scrolled .site-header-nav a:not(.site-header-active-link):hover,
+        [data-overlay-header].site-header.is-menu-open .site-header-nav a:not(.site-header-active-link):hover {
             color: #511315;
         }
-        [data-overlay-header].site-header.is-scrolled .site-header-active-link {
+        [data-overlay-header].site-header.is-scrolled .site-header-active-link,
+        [data-overlay-header].site-header.is-menu-open .site-header-active-link {
             border-bottom-color: #511315;
+        }
+        [data-overlay-header].site-header.is-menu-open .mobile-menu-icon {
+            filter: none;
         }
         .hero-header-contrast {
             position: absolute;

@@ -24,7 +24,7 @@
             currentIndex: 0,
             thumbnailWindow: 0,
             mainButton: element.querySelector('.ministry-gallery__main'),
-            mainImage: element.querySelector('.editorial-image-mask'),
+            mainImage: element.querySelector('.ministry-gallery__main-image'),
             thumbnails: element.querySelector('.ministry-gallery__thumbnails'),
             previousCarousel: element.querySelector('[data-carousel-prev]'),
             nextCarousel: element.querySelector('[data-carousel-next]')

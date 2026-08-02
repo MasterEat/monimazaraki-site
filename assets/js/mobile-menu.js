@@ -11,16 +11,41 @@
         overlayHeader.classList.toggle('is-menu-open', isOpen);
     };
 
+    const beginOverlayHeaderClosing = () => {
+        if (!overlayHeader) return;
+        overlayHeader.classList.add('is-menu-closing');
+    };
+
+    const endOverlayHeaderClosing = () => {
+        if (!overlayHeader) return;
+
+        window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+                overlayHeader.classList.remove('is-menu-closing');
+            });
+        });
+    };
+
     const closeMenu = (returnFocus = false) => {
+        beginOverlayHeaderClosing();
+        updateOverlayHeaderState(false);
+
         navigation.hidden = true;
         navigation.classList.add('hidden');
+
         button.setAttribute('aria-expanded', 'false');
         button.setAttribute('aria-label', 'Άνοιγμα μενού');
-        updateOverlayHeaderState(false);
+
+        endOverlayHeaderClosing();
+
         if (returnFocus) button.focus();
     };
 
     const openMenu = () => {
+        if (overlayHeader) {
+            overlayHeader.classList.remove('is-menu-closing');
+        }
+
         updateOverlayHeaderState(true);
         navigation.hidden = false;
         navigation.classList.remove('hidden');

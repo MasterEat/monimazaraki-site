@@ -1,0 +1,140 @@
+/* Compact galleries used only by the Diakonimata editorial sections. */
+.ministry-gallery {
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+}
+
+.ministry-gallery--right { margin-left: auto; }
+.ministry-gallery--left { margin-right: auto; }
+
+.ministry-gallery__main {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.ministry-gallery__main .editorial-image-mask {
+    width: 100%;
+    height: 100%;
+}
+
+.ministry-gallery__main-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ministry-gallery__main:focus-visible,
+.ministry-gallery__thumbnail:focus-visible,
+.ministry-gallery__carousel-button:focus-visible,
+.ministry-lightbox__control:focus-visible {
+    outline: 3px solid #8f6b32;
+    outline-offset: 3px;
+}
+
+.ministry-gallery__main:focus-visible .editorial-image-mask {
+    clip-path: inset(10px 10px 10px 10px);
+}
+
+.ministry-gallery__carousel {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.ministry-gallery__carousel--static {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.ministry-gallery__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.625rem;
+    min-width: 0;
+}
+
+.ministry-gallery__thumbnail {
+    display: block;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(112, 102, 89, 0.35);
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.86;
+    transition: opacity 160ms ease, border-color 160ms ease;
+}
+
+.ministry-gallery__thumbnail:hover { opacity: 1; border-color: #8f6b32; }
+.ministry-gallery__thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+
+.ministry-gallery__carousel-button,
+.ministry-lightbox__control {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.ministry-gallery__carousel-button svg,
+.ministry-lightbox__control svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ministry-lightbox[hidden] { display: none; }
+.ministry-lightbox { position: fixed; inset: 0; z-index: 100; }
+.ministry-lightbox__backdrop { position: absolute; inset: 0; background: rgba(18, 15, 11, 0.9); }
+.ministry-lightbox__dialog {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 1rem;
+    width: min(94vw, 1200px);
+    height: min(92vh, 900px);
+    margin: 4vh auto;
+    color: #fff8f4;
+}
+.ministry-lightbox__figure { display: flex; min-width: 0; height: 100%; margin: 0; flex-direction: column; align-items: center; justify-content: center; }
+.ministry-lightbox__image { display: block; max-width: 100%; max-height: calc(100% - 5rem); width: auto; height: auto; object-fit: contain; }
+.ministry-lightbox__description { max-width: 54rem; margin: 0.85rem auto 0; text-align: center; }
+.ministry-lightbox__counter { margin: 0.25rem 0 0; text-align: center; font-size: 0.875rem; }
+.ministry-lightbox__close { position: absolute; z-index: 1; top: 0; right: 0; background: rgba(18, 15, 11, 0.65); }
+.ministry-lightbox__control[hidden] { display: none; }
+
+@media (max-width: 767px) {
+    .ministry-gallery { max-width: none; }
+    .ministry-lightbox__dialog { grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 0.25rem; width: calc(100vw - 1rem); }
+    .ministry-lightbox__description { font-size: 0.925rem; line-height: 1.4; }
+}
+
+@media (max-width: 389px) {
+    .ministry-gallery__carousel { gap: 0.25rem; }
+    .ministry-gallery__thumbnails { gap: 0.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ministry-gallery__thumbnail { transition: none; }
+}
